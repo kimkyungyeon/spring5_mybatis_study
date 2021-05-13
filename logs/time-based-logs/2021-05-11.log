@@ -1,0 +1,771 @@
+[DEBUG] [2021-05-11 11:16] testOpenSession()
+[DEBUG] [2021-05-11 11:16] session org.apache.ibatis.session.defaults.DefaultSqlSession@2b4c1d96
+[DEBUG] [2021-05-11 11:16] testDataSource()
+[DEBUG] [2021-05-11 11:16] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2021-05-11 11:16] LoginTimeout 30
+[DEBUG] [2021-05-11 11:16] testOpenSession()
+[DEBUG] [2021-05-11 11:16] session org.apache.ibatis.session.defaults.DefaultSqlSession@45fd9a4d
+[DEBUG] [2021-05-11 11:16] testOpenSession()
+[DEBUG] [2021-05-11 11:16] session org.apache.ibatis.session.defaults.DefaultSqlSession@41bcf2d3
+[DEBUG] [2021-05-11 13:34] testOpenSession()
+[DEBUG] [2021-05-11 13:34] session org.apache.ibatis.session.defaults.DefaultSqlSession@52045dbe
+[DEBUG] [2021-05-11 13:34] testDataSource()
+[DEBUG] [2021-05-11 13:34] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2021-05-11 13:34] LoginTimeout 30
+[DEBUG] [2021-05-11 13:58] testselectStudentById()
+[DEBUG] [2021-05-11 13:58] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students where stud_id=?
+[DEBUG] [2021-05-11 13:58] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 13:58] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 13:58] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123-123-1234
+[DEBUG] [2021-05-11 13:58] <==      Total: 1
+[DEBUG] [2021-05-11 13:58] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, null]
+[DEBUG] [2021-05-11 13:59] testSelectStudentByNo()
+[DEBUG] [2021-05-11 13:59] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students where stud_id=?
+[DEBUG] [2021-05-11 13:59] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 13:59] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 13:59] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123-123-1234
+[DEBUG] [2021-05-11 13:59] <==      Total: 1
+[DEBUG] [2021-05-11 13:59] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, null]
+[DEBUG] [2021-05-11 14:15] testSelectStudentByNo()
+[DEBUG] [2021-05-11 14:15] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students where stud_id=?
+[DEBUG] [2021-05-11 14:15] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 14:15] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 14:15] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123-123-1234
+[DEBUG] [2021-05-11 14:15] <==      Total: 1
+[DEBUG] [2021-05-11 14:15] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, null]
+[DEBUG] [2021-05-11 14:17] testSelectStudentByNo()
+[DEBUG] [2021-05-11 14:17] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students where stud_id=?
+[DEBUG] [2021-05-11 14:17] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 14:17] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 14:17] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123-123-1234
+[DEBUG] [2021-05-11 14:17] <==      Total: 1
+[DEBUG] [2021-05-11 14:17] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, null]
+[DEBUG] [2021-05-11 14:24] testSelectStudentByNo()
+[DEBUG] [2021-05-11 14:24] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students where stud_id=?
+[DEBUG] [2021-05-11 14:24] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 14:24] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 14:24] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123-123-1234
+[DEBUG] [2021-05-11 14:24] <==      Total: 1
+[DEBUG] [2021-05-11 14:24] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 14:42] testSelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 14:42] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 14:42] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 14:42] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 14:42] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123, 123, 1234
+[DEBUG] [2021-05-11 14:42] <==      Total: 1
+[DEBUG] [2021-05-11 14:42] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 14:42] testSelectStudentById()
+[DEBUG] [2021-05-11 14:42] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students where stud_id=?
+[DEBUG] [2021-05-11 14:42] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 14:42] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 14:42] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123-123-1234
+[DEBUG] [2021-05-11 14:42] <==      Total: 1
+[DEBUG] [2021-05-11 14:42] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 14:43] testSelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 14:43] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 14:43] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 14:43] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 14:43] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123, 123, 1234
+[DEBUG] [2021-05-11 14:43] <==      Total: 1
+[DEBUG] [2021-05-11 14:43] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 14:43] testSelectStudentById()
+[DEBUG] [2021-05-11 14:43] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students where stud_id=?
+[DEBUG] [2021-05-11 14:43] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 14:43] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 14:43] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123-123-1234
+[DEBUG] [2021-05-11 14:43] <==      Total: 1
+[DEBUG] [2021-05-11 14:43] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 15:04] testSelectStudentByAll()
+[DEBUG] [2021-05-11 15:04] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 15:04] ==> Parameters: 
+[TRACE] [2021-05-11 15:04] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 15:04] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25
+[TRACE] [2021-05-11 15:04] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[DEBUG] [2021-05-11 15:04] <==      Total: 2
+[DEBUG] [2021-05-11 15:04] testSelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 15:04] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 15:04] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 15:04] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 15:04] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123, 123, 1234
+[DEBUG] [2021-05-11 15:04] <==      Total: 1
+[DEBUG] [2021-05-11 15:04] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 15:04] testSelectStudentById()
+[DEBUG] [2021-05-11 15:04] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students where stud_id=?
+[DEBUG] [2021-05-11 15:04] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 15:04] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 15:04] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123-123-1234
+[DEBUG] [2021-05-11 15:04] <==      Total: 1
+[DEBUG] [2021-05-11 15:04] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 15:05] testSelectStudentByAll()
+[DEBUG] [2021-05-11 15:05] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 15:05] ==> Parameters: 
+[TRACE] [2021-05-11 15:05] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 15:05] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25
+[TRACE] [2021-05-11 15:05] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[DEBUG] [2021-05-11 15:05] <==      Total: 2
+[DEBUG] [2021-05-11 15:05] testSelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 15:05] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 15:05] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 15:05] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 15:05] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123, 123, 1234
+[DEBUG] [2021-05-11 15:05] <==      Total: 1
+[DEBUG] [2021-05-11 15:05] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 15:05] testSelectStudentById()
+[DEBUG] [2021-05-11 15:05] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students where stud_id=?
+[DEBUG] [2021-05-11 15:05] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 15:05] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 15:05] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123-123-1234
+[DEBUG] [2021-05-11 15:05] <==      Total: 1
+[DEBUG] [2021-05-11 15:05] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 15:07] testSelectStudentByAll()
+[DEBUG] [2021-05-11 15:07] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 15:07] ==> Parameters: 
+[TRACE] [2021-05-11 15:07] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 15:07] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25
+[TRACE] [2021-05-11 15:07] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[DEBUG] [2021-05-11 15:07] <==      Total: 2
+[DEBUG] [2021-05-11 15:07] testSelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 15:07] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 15:07] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 15:07] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 15:07] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123, 123, 1234
+[DEBUG] [2021-05-11 15:07] <==      Total: 1
+[DEBUG] [2021-05-11 15:07] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 15:07] testSelectStudentById()
+[DEBUG] [2021-05-11 15:07] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students where stud_id=?
+[DEBUG] [2021-05-11 15:07] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 15:07] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 15:07] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123-123-1234
+[DEBUG] [2021-05-11 15:07] <==      Total: 1
+[DEBUG] [2021-05-11 15:07] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 15:18] testSelectStudentByAll()
+[DEBUG] [2021-05-11 15:18] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 15:18] ==> Parameters: 
+[TRACE] [2021-05-11 15:18] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 15:18] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25
+[TRACE] [2021-05-11 15:18] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[DEBUG] [2021-05-11 15:18] <==      Total: 2
+[DEBUG] [2021-05-11 15:18] ==>  Preparing: insert into students(stud_id, name, email, phone, dob) values (?, ?, ?, ?, ?)
+[DEBUG] [2021-05-11 15:18] ==> Parameters: 3(Integer), 홍길동3(String), lee@test.co.kr(String), 010-1234-1234](String), 1990-03-28 15:18:10.369(Timestamp)
+[DEBUG] [2021-05-11 15:18] <==    Updates: 1
+[DEBUG] [2021-05-11 15:18] testSelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 15:18] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 15:18] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 15:18] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 15:18] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123, 123, 1234
+[DEBUG] [2021-05-11 15:18] <==      Total: 1
+[DEBUG] [2021-05-11 15:18] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 15:18] testSelectStudentById()
+[DEBUG] [2021-05-11 15:18] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students WHERE stud_id = ?
+[DEBUG] [2021-05-11 15:18] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 15:18] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 15:18] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123-123-1234
+[DEBUG] [2021-05-11 15:18] <==      Total: 1
+[DEBUG] [2021-05-11 15:18] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 15:23] test1SelectStudentById()
+[DEBUG] [2021-05-11 15:23] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students WHERE stud_id = ?
+[DEBUG] [2021-05-11 15:23] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 15:23] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 15:23] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123-123-1234
+[DEBUG] [2021-05-11 15:23] <==      Total: 1
+[DEBUG] [2021-05-11 15:23] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 15:23] test2SelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 15:23] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 15:23] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 15:23] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 15:23] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123, 123, 1234
+[DEBUG] [2021-05-11 15:23] <==      Total: 1
+[DEBUG] [2021-05-11 15:23] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 15:23] test3SelectStudentByAll()
+[DEBUG] [2021-05-11 15:23] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 15:23] ==> Parameters: 
+[TRACE] [2021-05-11 15:23] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 15:23] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25
+[TRACE] [2021-05-11 15:23] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[TRACE] [2021-05-11 15:23] <==        Row: 3, 홍길동3, lee@test.co.kr, 1990-03-28
+[DEBUG] [2021-05-11 15:23] <==      Total: 3
+[DEBUG] [2021-05-11 15:23] test5DeleteStudent()
+[DEBUG] [2021-05-11 15:23] ==>  Preparing: delete from students where stud_id=?
+[DEBUG] [2021-05-11 15:23] ==> Parameters: 3(Integer)
+[DEBUG] [2021-05-11 15:23] <==    Updates: 1
+[DEBUG] [2021-05-11 15:27] test1SelectStudentById()
+[DEBUG] [2021-05-11 15:27] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students WHERE stud_id = ?
+[DEBUG] [2021-05-11 15:27] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 15:27] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 15:27] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123-123-1234
+[DEBUG] [2021-05-11 15:27] <==      Total: 1
+[DEBUG] [2021-05-11 15:27] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 15:27] test2SelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 15:27] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 15:27] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 15:27] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 15:27] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25, 123, 123, 1234
+[DEBUG] [2021-05-11 15:27] <==      Total: 1
+[DEBUG] [2021-05-11 15:27] Student [1, Timothy, timothy@gmail.com, Mon Apr 25 00:00:00 KST 1988, 123-123-1234]]
+[DEBUG] [2021-05-11 15:27] test3SelectStudentByAll()
+[DEBUG] [2021-05-11 15:27] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 15:27] ==> Parameters: 
+[TRACE] [2021-05-11 15:27] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 15:27] <==        Row: 1, Timothy, timothy@gmail.com, 1988-04-25
+[TRACE] [2021-05-11 15:27] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[DEBUG] [2021-05-11 15:27] <==      Total: 2
+[DEBUG] [2021-05-11 15:27] test4InsertStudent()
+[DEBUG] [2021-05-11 15:27] ==>  Preparing: insert into students(stud_id, name, email, phone, dob) values (?, ?, ?, ?, ?)
+[DEBUG] [2021-05-11 15:27] ==> Parameters: 3(Integer), 홍길동3(String), lee@test.co.kr(String), 010-1234-1234](String), 1990-03-28 15:27:19.899(Timestamp)
+[DEBUG] [2021-05-11 15:27] <==    Updates: 1
+[DEBUG] [2021-05-11 15:27] test5DeleteStudent()
+[DEBUG] [2021-05-11 15:27] ==>  Preparing: delete from students where stud_id=?
+[DEBUG] [2021-05-11 15:27] ==> Parameters: 3(Integer)
+[DEBUG] [2021-05-11 15:27] <==    Updates: 1
+[DEBUG] [2021-05-11 15:27] test6UpdateStudent()
+[DEBUG] [2021-05-11 15:27] ==>  Preparing: update students set name=?, email=?, phone=?, dob=? where stud_id = ?
+[DEBUG] [2021-05-11 15:27] ==> Parameters: Timothy(String), test@test.co.kr(String), 987-654-3211](String), 2021-05-11 15:27:19.911(Timestamp), 1(Integer)
+[DEBUG] [2021-05-11 15:27] <==    Updates: 1
+[DEBUG] [2021-05-11 15:28] test1SelectStudentById()
+[DEBUG] [2021-05-11 15:28] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students WHERE stud_id = ?
+[DEBUG] [2021-05-11 15:28] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 15:28] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 15:28] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 987-654-3211]
+[DEBUG] [2021-05-11 15:28] <==      Total: 1
+[DEBUG] [2021-05-11 15:28] Student [1, Timothy, test@test.co.kr, Tue May 11 00:00:00 KST 2021, 987-654-3211]]]
+[DEBUG] [2021-05-11 15:28] test2SelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 15:28] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 15:28] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 15:28] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 15:28] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 987, 654, 3211
+[DEBUG] [2021-05-11 15:28] <==      Total: 1
+[DEBUG] [2021-05-11 15:28] Student [1, Timothy, test@test.co.kr, Tue May 11 00:00:00 KST 2021, 987-654-3211]]
+[DEBUG] [2021-05-11 15:28] test3SelectStudentByAll()
+[DEBUG] [2021-05-11 15:28] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 15:28] ==> Parameters: 
+[TRACE] [2021-05-11 15:28] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 15:28] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11
+[TRACE] [2021-05-11 15:28] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[DEBUG] [2021-05-11 15:28] <==      Total: 2
+[DEBUG] [2021-05-11 15:28] test4InsertStudent()
+[DEBUG] [2021-05-11 15:28] ==>  Preparing: insert into students(stud_id, name, email, phone, dob) values (?, ?, ?, ?, ?)
+[DEBUG] [2021-05-11 15:28] ==> Parameters: 3(Integer), 홍길동3(String), lee@test.co.kr(String), 010-1234-1234](String), 1990-03-28 15:28:21.457(Timestamp)
+[DEBUG] [2021-05-11 15:28] <==    Updates: 1
+[DEBUG] [2021-05-11 15:28] test5DeleteStudent()
+[DEBUG] [2021-05-11 15:28] ==>  Preparing: delete from students where stud_id=?
+[DEBUG] [2021-05-11 15:28] ==> Parameters: 3(Integer)
+[DEBUG] [2021-05-11 15:28] <==    Updates: 1
+[DEBUG] [2021-05-11 15:28] test6UpdateStudent()
+[DEBUG] [2021-05-11 15:28] ==>  Preparing: update students set name=?, email=?, phone=?, dob=? where stud_id = ?
+[DEBUG] [2021-05-11 15:28] ==> Parameters: Timothy(String), test@test.co.kr(String), 123-123-1234](String), 2021-05-11 15:28:21.468(Timestamp), 1(Integer)
+[DEBUG] [2021-05-11 15:28] <==    Updates: 1
+[DEBUG] [2021-05-11 15:30] test1SelectStudentById()
+[DEBUG] [2021-05-11 15:30] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students WHERE stud_id = ?
+[DEBUG] [2021-05-11 15:30] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 15:30] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 15:30] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234]
+[DEBUG] [2021-05-11 15:30] <==      Total: 1
+[DEBUG] [2021-05-11 15:30] Student [1, Timothy, test@test.co.kr, Tue May 11 00:00:00 KST 2021, 123-123-1234]]
+[DEBUG] [2021-05-11 15:30] test2SelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 15:30] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 15:30] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 15:30] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 15:30] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123, 123, 1234
+[DEBUG] [2021-05-11 15:30] <==      Total: 1
+[DEBUG] [2021-05-11 15:30] Student [1, Timothy, test@test.co.kr, Tue May 11 00:00:00 KST 2021, 123-123-1234]
+[DEBUG] [2021-05-11 15:30] test3SelectStudentByAll()
+[DEBUG] [2021-05-11 15:30] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 15:30] ==> Parameters: 
+[TRACE] [2021-05-11 15:30] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 15:30] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11
+[TRACE] [2021-05-11 15:30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[DEBUG] [2021-05-11 15:30] <==      Total: 2
+[DEBUG] [2021-05-11 15:30] test4InsertStudent()
+[DEBUG] [2021-05-11 15:30] ==>  Preparing: insert into students(stud_id, name, email, phone, dob) values (?, ?, ?, ?, ?)
+[DEBUG] [2021-05-11 15:30] ==> Parameters: 3(Integer), 홍길동3(String), lee@test.co.kr(String), 010-1234-1234(String), 1990-03-28 15:30:00.442(Timestamp)
+[DEBUG] [2021-05-11 15:30] <==    Updates: 1
+[DEBUG] [2021-05-11 15:30] test5DeleteStudent()
+[DEBUG] [2021-05-11 15:30] ==>  Preparing: delete from students where stud_id=?
+[DEBUG] [2021-05-11 15:30] ==> Parameters: 3(Integer)
+[DEBUG] [2021-05-11 15:30] <==    Updates: 1
+[DEBUG] [2021-05-11 15:30] test6UpdateStudent()
+[DEBUG] [2021-05-11 15:30] ==>  Preparing: update students set name=?, email=?, phone=?, dob=? where stud_id = ?
+[DEBUG] [2021-05-11 15:30] ==> Parameters: Timothy(String), test@test.co.kr(String), 123-123-1234(String), 2021-05-11 15:30:00.453(Timestamp), 1(Integer)
+[DEBUG] [2021-05-11 15:30] <==    Updates: 1
+[DEBUG] [2021-05-11 16:16] test1SelectStudentById()
+[DEBUG] [2021-05-11 16:16] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students WHERE stud_id = ?
+[DEBUG] [2021-05-11 16:16] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:16] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:16] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[DEBUG] [2021-05-11 16:16] <==      Total: 1
+[DEBUG] [2021-05-11 16:16] Student [1, Timothy, test@test.co.kr, Tue May 11 00:00:00 KST 2021, 123-123-1234]
+[DEBUG] [2021-05-11 16:16] test2SelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 16:16] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 16:16] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:16] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 16:16] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123, 123, 1234
+[DEBUG] [2021-05-11 16:16] <==      Total: 1
+[DEBUG] [2021-05-11 16:16] Student [1, Timothy, test@test.co.kr, Tue May 11 00:00:00 KST 2021, 123-123-1234]
+[DEBUG] [2021-05-11 16:16] test3SelectStudentByAll()
+[DEBUG] [2021-05-11 16:16] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 16:16] ==> Parameters: 
+[TRACE] [2021-05-11 16:16] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 16:16] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11
+[TRACE] [2021-05-11 16:16] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[DEBUG] [2021-05-11 16:16] <==      Total: 2
+[DEBUG] [2021-05-11 16:16] test4InsertStudent()
+[DEBUG] [2021-05-11 16:16] ==>  Preparing: insert into students(stud_id, name, email, phone, dob) values (?, ?, ?, ?, ?)
+[DEBUG] [2021-05-11 16:16] ==> Parameters: 3(Integer), 홍길동3(String), lee@test.co.kr(String), 010-1234-1234(String), 1990-03-28 16:16:24.564(Timestamp)
+[DEBUG] [2021-05-11 16:16] <==    Updates: 1
+[DEBUG] [2021-05-11 16:16] test5DeleteStudent()
+[DEBUG] [2021-05-11 16:16] ==>  Preparing: delete from students where stud_id=?
+[DEBUG] [2021-05-11 16:16] ==> Parameters: 3(Integer)
+[DEBUG] [2021-05-11 16:16] <==    Updates: 1
+[DEBUG] [2021-05-11 16:16] test6UpdateStudent()
+[DEBUG] [2021-05-11 16:16] ==>  Preparing: update students set name=?, email=?, phone=?, dob=? where stud_id = ?
+[DEBUG] [2021-05-11 16:16] ==> Parameters: Timothy(String), test@test.co.kr(String), 123-123-1234(String), 2021-05-11 16:16:24.574(Timestamp), 1(Integer)
+[DEBUG] [2021-05-11 16:16] <==    Updates: 1
+[DEBUG] [2021-05-11 16:16] test7SelectStudentByAllForHashMap()
+[DEBUG] [2021-05-11 16:16] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students
+[DEBUG] [2021-05-11 16:16] ==> Parameters: 
+[TRACE] [2021-05-11 16:16] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:16] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[TRACE] [2021-05-11 16:16] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[DEBUG] [2021-05-11 16:16] <==      Total: 2
+[DEBUG] [2021-05-11 16:16] phone -> 123-123-1234
+[DEBUG] [2021-05-11 16:16] dob -> 2021-05-11
+[DEBUG] [2021-05-11 16:16] name -> Timothy
+[DEBUG] [2021-05-11 16:16] studId -> 1
+[DEBUG] [2021-05-11 16:16] email -> test@test.co.kr
+[DEBUG] [2021-05-11 16:16] phone -> 789-456-1234
+[DEBUG] [2021-05-11 16:16] dob -> 1990-08-15
+[DEBUG] [2021-05-11 16:16] name -> Douglas
+[DEBUG] [2021-05-11 16:16] studId -> 2
+[DEBUG] [2021-05-11 16:16] email -> douglas@gmail.com
+[DEBUG] [2021-05-11 16:17] test1SelectStudentById()
+[DEBUG] [2021-05-11 16:17] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students WHERE stud_id = ?
+[DEBUG] [2021-05-11 16:17] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:17] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:17] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[DEBUG] [2021-05-11 16:17] <==      Total: 1
+[DEBUG] [2021-05-11 16:17] Student [1, Timothy, test@test.co.kr, Tue May 11 00:00:00 KST 2021, 123-123-1234]
+[DEBUG] [2021-05-11 16:17] test2SelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 16:17] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 16:17] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:17] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 16:17] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123, 123, 1234
+[DEBUG] [2021-05-11 16:17] <==      Total: 1
+[DEBUG] [2021-05-11 16:17] Student [1, Timothy, test@test.co.kr, Tue May 11 00:00:00 KST 2021, 123-123-1234]
+[DEBUG] [2021-05-11 16:17] test3SelectStudentByAll()
+[DEBUG] [2021-05-11 16:17] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 16:17] ==> Parameters: 
+[TRACE] [2021-05-11 16:17] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 16:17] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11
+[TRACE] [2021-05-11 16:17] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[DEBUG] [2021-05-11 16:17] <==      Total: 2
+[DEBUG] [2021-05-11 16:17] test4InsertStudent()
+[DEBUG] [2021-05-11 16:17] ==>  Preparing: insert into students(stud_id, name, email, phone, dob) values (?, ?, ?, ?, ?)
+[DEBUG] [2021-05-11 16:17] ==> Parameters: 3(Integer), 홍길동3(String), lee@test.co.kr(String), 010-1234-1234(String), 1990-03-28 16:17:12.528(Timestamp)
+[DEBUG] [2021-05-11 16:17] <==    Updates: 1
+[DEBUG] [2021-05-11 16:17] test5DeleteStudent()
+[DEBUG] [2021-05-11 16:17] ==>  Preparing: delete from students where stud_id=?
+[DEBUG] [2021-05-11 16:17] ==> Parameters: 3(Integer)
+[DEBUG] [2021-05-11 16:17] <==    Updates: 1
+[DEBUG] [2021-05-11 16:17] test6UpdateStudent()
+[DEBUG] [2021-05-11 16:17] ==>  Preparing: update students set name=?, email=?, phone=?, dob=? where stud_id = ?
+[DEBUG] [2021-05-11 16:17] ==> Parameters: Timothy(String), test@test.co.kr(String), 123-123-1234(String), 2021-05-11 16:17:12.54(Timestamp), 1(Integer)
+[DEBUG] [2021-05-11 16:17] <==    Updates: 1
+[DEBUG] [2021-05-11 16:17] test7SelectStudentByAllForHashMap()
+[DEBUG] [2021-05-11 16:17] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students
+[DEBUG] [2021-05-11 16:17] ==> Parameters: 
+[TRACE] [2021-05-11 16:17] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:17] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[TRACE] [2021-05-11 16:17] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[DEBUG] [2021-05-11 16:17] <==      Total: 2
+[DEBUG] [2021-05-11 16:17] phone -> 123-123-1234
+[DEBUG] [2021-05-11 16:17] dob -> 2021-05-11
+[DEBUG] [2021-05-11 16:17] name -> Timothy
+[DEBUG] [2021-05-11 16:17] studId -> 1
+[DEBUG] [2021-05-11 16:17] email -> test@test.co.kr
+[DEBUG] [2021-05-11 16:17] phone -> 789-456-1234
+[DEBUG] [2021-05-11 16:17] dob -> 1990-08-15
+[DEBUG] [2021-05-11 16:17] name -> Douglas
+[DEBUG] [2021-05-11 16:17] studId -> 2
+[DEBUG] [2021-05-11 16:17] email -> douglas@gmail.com
+[DEBUG] [2021-05-11 16:41] test10SelectStudentByNoAssociation()
+[DEBUG] [2021-05-11 16:41] test1SelectStudentById()
+[DEBUG] [2021-05-11 16:41] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students WHERE stud_id = ?
+[DEBUG] [2021-05-11 16:41] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:41] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:41] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[DEBUG] [2021-05-11 16:41] <==      Total: 1
+[DEBUG] [2021-05-11 16:41] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, null]
+[DEBUG] [2021-05-11 16:41] test2SelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 16:41] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 16:41] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:41] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 16:41] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123, 123, 1234
+[DEBUG] [2021-05-11 16:41] <==      Total: 1
+[DEBUG] [2021-05-11 16:41] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, null]
+[DEBUG] [2021-05-11 16:41] test3SelectStudentByAll()
+[DEBUG] [2021-05-11 16:41] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 16:41] ==> Parameters: 
+[TRACE] [2021-05-11 16:41] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 16:41] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11
+[TRACE] [2021-05-11 16:41] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[DEBUG] [2021-05-11 16:41] <==      Total: 2
+[DEBUG] [2021-05-11 16:41] test4InsertStudent()
+[DEBUG] [2021-05-11 16:41] ==>  Preparing: insert into students(stud_id, name, email, phone, dob) values (?, ?, ?, ?, ?)
+[DEBUG] [2021-05-11 16:41] ==> Parameters: 3(Integer), 홍길동3(String), lee@test.co.kr(String), 010-1234-1234(String), 1990-03-28 16:41:39.257(Timestamp)
+[DEBUG] [2021-05-11 16:41] <==    Updates: 1
+[DEBUG] [2021-05-11 16:41] test5DeleteStudent()
+[DEBUG] [2021-05-11 16:41] ==>  Preparing: delete from students where stud_id=?
+[DEBUG] [2021-05-11 16:41] ==> Parameters: 3(Integer)
+[DEBUG] [2021-05-11 16:41] <==    Updates: 1
+[DEBUG] [2021-05-11 16:41] test6UpdateStudent()
+[DEBUG] [2021-05-11 16:41] ==>  Preparing: update students set name=?, email=?, phone=?, dob=? where stud_id = ?
+[DEBUG] [2021-05-11 16:41] ==> Parameters: Timothy(String), test@test.co.kr(String), 123-123-1234(String), 2021-05-11 16:41:39.267(Timestamp), 1(Integer)
+[DEBUG] [2021-05-11 16:41] <==    Updates: 1
+[DEBUG] [2021-05-11 16:41] test7SelectStudentByAllForHashMap()
+[DEBUG] [2021-05-11 16:41] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students
+[DEBUG] [2021-05-11 16:41] ==> Parameters: 
+[TRACE] [2021-05-11 16:41] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:41] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[TRACE] [2021-05-11 16:41] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[DEBUG] [2021-05-11 16:41] <==      Total: 2
+[DEBUG] [2021-05-11 16:41] phone -> 123-123-1234
+[DEBUG] [2021-05-11 16:41] dob -> 2021-05-11
+[DEBUG] [2021-05-11 16:41] name -> Timothy
+[DEBUG] [2021-05-11 16:41] studId -> 1
+[DEBUG] [2021-05-11 16:41] email -> test@test.co.kr
+[DEBUG] [2021-05-11 16:41] phone -> 789-456-1234
+[DEBUG] [2021-05-11 16:41] dob -> 1990-08-15
+[DEBUG] [2021-05-11 16:41] name -> Douglas
+[DEBUG] [2021-05-11 16:41] studId -> 2
+[DEBUG] [2021-05-11 16:41] email -> douglas@gmail.com
+[DEBUG] [2021-05-11 16:42] test10SelectStudentByNoAssociation()
+[DEBUG] [2021-05-11 16:42] test1SelectStudentById()
+[DEBUG] [2021-05-11 16:42] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students WHERE stud_id = ?
+[DEBUG] [2021-05-11 16:42] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:42] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:42] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[DEBUG] [2021-05-11 16:42] <==      Total: 1
+[DEBUG] [2021-05-11 16:42] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, null]
+[DEBUG] [2021-05-11 16:42] test2SelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 16:42] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 16:42] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:42] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 16:42] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123, 123, 1234
+[DEBUG] [2021-05-11 16:42] <==      Total: 1
+[DEBUG] [2021-05-11 16:42] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, null]
+[DEBUG] [2021-05-11 16:42] test3SelectStudentByAll()
+[DEBUG] [2021-05-11 16:42] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 16:42] ==> Parameters: 
+[TRACE] [2021-05-11 16:42] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 16:42] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11
+[TRACE] [2021-05-11 16:42] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[DEBUG] [2021-05-11 16:42] <==      Total: 2
+[DEBUG] [2021-05-11 16:42] test4InsertStudent()
+[DEBUG] [2021-05-11 16:42] ==>  Preparing: insert into students(stud_id, name, email, phone, dob) values (?, ?, ?, ?, ?)
+[DEBUG] [2021-05-11 16:42] ==> Parameters: 3(Integer), 홍길동3(String), lee@test.co.kr(String), 010-1234-1234(String), 1990-03-28 16:42:52.658(Timestamp)
+[DEBUG] [2021-05-11 16:42] <==    Updates: 1
+[DEBUG] [2021-05-11 16:42] test5DeleteStudent()
+[DEBUG] [2021-05-11 16:42] ==>  Preparing: delete from students where stud_id=?
+[DEBUG] [2021-05-11 16:42] ==> Parameters: 3(Integer)
+[DEBUG] [2021-05-11 16:42] <==    Updates: 1
+[DEBUG] [2021-05-11 16:42] test6UpdateStudent()
+[DEBUG] [2021-05-11 16:42] ==>  Preparing: update students set name=?, email=?, phone=?, dob=? where stud_id = ?
+[DEBUG] [2021-05-11 16:42] ==> Parameters: Timothy(String), test@test.co.kr(String), 123-123-1234(String), 2021-05-11 16:42:52.673(Timestamp), 1(Integer)
+[DEBUG] [2021-05-11 16:42] <==    Updates: 1
+[DEBUG] [2021-05-11 16:42] test7SelectStudentByAllForHashMap()
+[DEBUG] [2021-05-11 16:42] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students
+[DEBUG] [2021-05-11 16:42] ==> Parameters: 
+[TRACE] [2021-05-11 16:42] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:42] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[TRACE] [2021-05-11 16:42] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[DEBUG] [2021-05-11 16:42] <==      Total: 2
+[DEBUG] [2021-05-11 16:42] phone -> 123-123-1234
+[DEBUG] [2021-05-11 16:42] dob -> 2021-05-11
+[DEBUG] [2021-05-11 16:42] name -> Timothy
+[DEBUG] [2021-05-11 16:42] studId -> 1
+[DEBUG] [2021-05-11 16:42] email -> test@test.co.kr
+[DEBUG] [2021-05-11 16:42] phone -> 789-456-1234
+[DEBUG] [2021-05-11 16:42] dob -> 1990-08-15
+[DEBUG] [2021-05-11 16:42] name -> Douglas
+[DEBUG] [2021-05-11 16:42] studId -> 2
+[DEBUG] [2021-05-11 16:42] email -> douglas@gmail.com
+[DEBUG] [2021-05-11 16:43] test10SelectStudentByNoAssociation()
+[DEBUG] [2021-05-11 16:43] test1SelectStudentById()
+[DEBUG] [2021-05-11 16:43] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students WHERE stud_id = ?
+[DEBUG] [2021-05-11 16:43] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:43] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:43] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[DEBUG] [2021-05-11 16:43] <==      Total: 1
+[DEBUG] [2021-05-11 16:43] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, null]
+[DEBUG] [2021-05-11 16:43] test2SelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 16:43] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 16:43] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:43] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 16:43] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123, 123, 1234
+[DEBUG] [2021-05-11 16:43] <==      Total: 1
+[DEBUG] [2021-05-11 16:43] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, null]
+[DEBUG] [2021-05-11 16:43] test3SelectStudentByAll()
+[DEBUG] [2021-05-11 16:43] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 16:43] ==> Parameters: 
+[TRACE] [2021-05-11 16:43] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 16:43] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11
+[TRACE] [2021-05-11 16:43] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[DEBUG] [2021-05-11 16:43] <==      Total: 2
+[DEBUG] [2021-05-11 16:43] test4InsertStudent()
+[DEBUG] [2021-05-11 16:43] ==>  Preparing: insert into students(stud_id, name, email, phone, dob) values (?, ?, ?, ?, ?)
+[DEBUG] [2021-05-11 16:43] ==> Parameters: 3(Integer), 홍길동3(String), lee@test.co.kr(String), 010-1234-1234(String), 1990-03-28 16:43:09.378(Timestamp)
+[DEBUG] [2021-05-11 16:43] <==    Updates: 1
+[DEBUG] [2021-05-11 16:43] test5DeleteStudent()
+[DEBUG] [2021-05-11 16:43] ==>  Preparing: delete from students where stud_id=?
+[DEBUG] [2021-05-11 16:43] ==> Parameters: 3(Integer)
+[DEBUG] [2021-05-11 16:43] <==    Updates: 1
+[DEBUG] [2021-05-11 16:43] test6UpdateStudent()
+[DEBUG] [2021-05-11 16:43] ==>  Preparing: update students set name=?, email=?, phone=?, dob=? where stud_id = ?
+[DEBUG] [2021-05-11 16:43] ==> Parameters: Timothy(String), test@test.co.kr(String), 123-123-1234(String), 2021-05-11 16:43:09.39(Timestamp), 1(Integer)
+[DEBUG] [2021-05-11 16:43] <==    Updates: 1
+[DEBUG] [2021-05-11 16:43] test7SelectStudentByAllForHashMap()
+[DEBUG] [2021-05-11 16:43] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students
+[DEBUG] [2021-05-11 16:43] ==> Parameters: 
+[TRACE] [2021-05-11 16:43] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:43] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[TRACE] [2021-05-11 16:43] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[DEBUG] [2021-05-11 16:43] <==      Total: 2
+[DEBUG] [2021-05-11 16:43] phone -> 123-123-1234
+[DEBUG] [2021-05-11 16:43] dob -> 2021-05-11
+[DEBUG] [2021-05-11 16:43] name -> Timothy
+[DEBUG] [2021-05-11 16:43] studId -> 1
+[DEBUG] [2021-05-11 16:43] email -> test@test.co.kr
+[DEBUG] [2021-05-11 16:43] phone -> 789-456-1234
+[DEBUG] [2021-05-11 16:43] dob -> 1990-08-15
+[DEBUG] [2021-05-11 16:43] name -> Douglas
+[DEBUG] [2021-05-11 16:43] studId -> 2
+[DEBUG] [2021-05-11 16:43] email -> douglas@gmail.com
+[DEBUG] [2021-05-11 16:43] test10SelectStudentByNoAssociation()
+[DEBUG] [2021-05-11 16:43] test1SelectStudentById()
+[DEBUG] [2021-05-11 16:43] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students WHERE stud_id = ?
+[DEBUG] [2021-05-11 16:43] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:43] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:43] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[DEBUG] [2021-05-11 16:43] <==      Total: 1
+[DEBUG] [2021-05-11 16:43] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, null]
+[DEBUG] [2021-05-11 16:43] test2SelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 16:43] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 16:43] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:43] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 16:43] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123, 123, 1234
+[DEBUG] [2021-05-11 16:43] <==      Total: 1
+[DEBUG] [2021-05-11 16:43] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, null]
+[DEBUG] [2021-05-11 16:43] test3SelectStudentByAll()
+[DEBUG] [2021-05-11 16:43] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 16:43] ==> Parameters: 
+[TRACE] [2021-05-11 16:43] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 16:43] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11
+[TRACE] [2021-05-11 16:43] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[DEBUG] [2021-05-11 16:43] <==      Total: 2
+[DEBUG] [2021-05-11 16:43] test4InsertStudent()
+[DEBUG] [2021-05-11 16:43] ==>  Preparing: insert into students(stud_id, name, email, phone, dob) values (?, ?, ?, ?, ?)
+[DEBUG] [2021-05-11 16:43] ==> Parameters: 3(Integer), 홍길동3(String), lee@test.co.kr(String), 010-1234-1234(String), 1990-03-28 16:43:59.874(Timestamp)
+[DEBUG] [2021-05-11 16:43] <==    Updates: 1
+[DEBUG] [2021-05-11 16:43] test5DeleteStudent()
+[DEBUG] [2021-05-11 16:43] ==>  Preparing: delete from students where stud_id=?
+[DEBUG] [2021-05-11 16:43] ==> Parameters: 3(Integer)
+[DEBUG] [2021-05-11 16:43] <==    Updates: 1
+[DEBUG] [2021-05-11 16:43] test6UpdateStudent()
+[DEBUG] [2021-05-11 16:43] ==>  Preparing: update students set name=?, email=?, phone=?, dob=? where stud_id = ?
+[DEBUG] [2021-05-11 16:43] ==> Parameters: Timothy(String), test@test.co.kr(String), 123-123-1234(String), 2021-05-11 16:43:59.885(Timestamp), 1(Integer)
+[DEBUG] [2021-05-11 16:43] <==    Updates: 1
+[DEBUG] [2021-05-11 16:43] test7SelectStudentByAllForHashMap()
+[DEBUG] [2021-05-11 16:43] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students
+[DEBUG] [2021-05-11 16:43] ==> Parameters: 
+[TRACE] [2021-05-11 16:43] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:43] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[TRACE] [2021-05-11 16:43] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[DEBUG] [2021-05-11 16:43] <==      Total: 2
+[DEBUG] [2021-05-11 16:43] phone -> 123-123-1234
+[DEBUG] [2021-05-11 16:43] dob -> 2021-05-11
+[DEBUG] [2021-05-11 16:43] name -> Timothy
+[DEBUG] [2021-05-11 16:43] studId -> 1
+[DEBUG] [2021-05-11 16:43] email -> test@test.co.kr
+[DEBUG] [2021-05-11 16:43] phone -> 789-456-1234
+[DEBUG] [2021-05-11 16:43] dob -> 1990-08-15
+[DEBUG] [2021-05-11 16:43] name -> Douglas
+[DEBUG] [2021-05-11 16:43] studId -> 2
+[DEBUG] [2021-05-11 16:43] email -> douglas@gmail.com
+[DEBUG] [2021-05-11 16:44] test10SelectStudentByNoAssociation()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: select stud_id, name, email, phone, dob, a.addr_id, street, city, state, zip, country from students s join addresses a on s.addr_id =a.addr_id where stud_id = ?;
+[DEBUG] [2021-05-11 16:44] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:44] <==    Columns: stud_id, name, email, phone, dob, addr_id, street, city, state, zip, country
+[TRACE] [2021-05-11 16:44] <==        Row: 1, Timothy, test@test.co.kr, 123-123-1234, 2021-05-11, 3, 710 N Cable Rd, Lima, OH, 45825, Allen
+[DEBUG] [2021-05-11 16:44] <==      Total: 1
+[DEBUG] [2021-05-11 16:44] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, Address [3, 710 N Cable Rd, Lima, OH, 45825, Allen]]
+[DEBUG] [2021-05-11 16:44] test1SelectStudentById()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students WHERE stud_id = ?
+[DEBUG] [2021-05-11 16:44] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:44] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:44] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[DEBUG] [2021-05-11 16:44] <==      Total: 1
+[DEBUG] [2021-05-11 16:44] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, null]
+[DEBUG] [2021-05-11 16:44] test2SelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 16:44] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:44] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 16:44] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123, 123, 1234
+[DEBUG] [2021-05-11 16:44] <==      Total: 1
+[DEBUG] [2021-05-11 16:44] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, null]
+[DEBUG] [2021-05-11 16:44] test3SelectStudentByAll()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 16:44] ==> Parameters: 
+[TRACE] [2021-05-11 16:44] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 16:44] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11
+[TRACE] [2021-05-11 16:44] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[DEBUG] [2021-05-11 16:44] <==      Total: 2
+[DEBUG] [2021-05-11 16:44] test4InsertStudent()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: insert into students(stud_id, name, email, phone, dob) values (?, ?, ?, ?, ?)
+[DEBUG] [2021-05-11 16:44] ==> Parameters: 3(Integer), 홍길동3(String), lee@test.co.kr(String), 010-1234-1234(String), 1990-03-28 16:44:19.5(Timestamp)
+[DEBUG] [2021-05-11 16:44] <==    Updates: 1
+[DEBUG] [2021-05-11 16:44] test5DeleteStudent()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: delete from students where stud_id=?
+[DEBUG] [2021-05-11 16:44] ==> Parameters: 3(Integer)
+[DEBUG] [2021-05-11 16:44] <==    Updates: 1
+[DEBUG] [2021-05-11 16:44] test6UpdateStudent()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: update students set name=?, email=?, phone=?, dob=? where stud_id = ?
+[DEBUG] [2021-05-11 16:44] ==> Parameters: Timothy(String), test@test.co.kr(String), 123-123-1234(String), 2021-05-11 16:44:19.51(Timestamp), 1(Integer)
+[DEBUG] [2021-05-11 16:44] <==    Updates: 1
+[DEBUG] [2021-05-11 16:44] test7SelectStudentByAllForHashMap()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students
+[DEBUG] [2021-05-11 16:44] ==> Parameters: 
+[TRACE] [2021-05-11 16:44] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:44] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[TRACE] [2021-05-11 16:44] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[DEBUG] [2021-05-11 16:44] <==      Total: 2
+[DEBUG] [2021-05-11 16:44] phone -> 123-123-1234
+[DEBUG] [2021-05-11 16:44] dob -> 2021-05-11
+[DEBUG] [2021-05-11 16:44] name -> Timothy
+[DEBUG] [2021-05-11 16:44] studId -> 1
+[DEBUG] [2021-05-11 16:44] email -> test@test.co.kr
+[DEBUG] [2021-05-11 16:44] phone -> 789-456-1234
+[DEBUG] [2021-05-11 16:44] dob -> 1990-08-15
+[DEBUG] [2021-05-11 16:44] name -> Douglas
+[DEBUG] [2021-05-11 16:44] studId -> 2
+[DEBUG] [2021-05-11 16:44] email -> douglas@gmail.com
+[DEBUG] [2021-05-11 16:44] test1SelectStudentById()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students WHERE stud_id = ?
+[DEBUG] [2021-05-11 16:44] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:44] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:44] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[DEBUG] [2021-05-11 16:44] <==      Total: 1
+[DEBUG] [2021-05-11 16:44] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, null]
+[DEBUG] [2021-05-11 16:44] test2SelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 16:44] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:44] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 16:44] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123, 123, 1234
+[DEBUG] [2021-05-11 16:44] <==      Total: 1
+[DEBUG] [2021-05-11 16:44] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, null]
+[DEBUG] [2021-05-11 16:44] test3SelectStudentByAll()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 16:44] ==> Parameters: 
+[TRACE] [2021-05-11 16:44] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 16:44] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11
+[TRACE] [2021-05-11 16:44] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[DEBUG] [2021-05-11 16:44] <==      Total: 2
+[DEBUG] [2021-05-11 16:44] test4InsertStudent()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: insert into students(stud_id, name, email, phone, dob) values (?, ?, ?, ?, ?)
+[DEBUG] [2021-05-11 16:44] ==> Parameters: 3(Integer), 홍길동3(String), lee@test.co.kr(String), 010-1234-1234(String), 1990-03-28 16:44:39.243(Timestamp)
+[DEBUG] [2021-05-11 16:44] <==    Updates: 1
+[DEBUG] [2021-05-11 16:44] test5DeleteStudent()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: delete from students where stud_id=?
+[DEBUG] [2021-05-11 16:44] ==> Parameters: 3(Integer)
+[DEBUG] [2021-05-11 16:44] <==    Updates: 1
+[DEBUG] [2021-05-11 16:44] test6UpdateStudent()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: update students set name=?, email=?, phone=?, dob=? where stud_id = ?
+[DEBUG] [2021-05-11 16:44] ==> Parameters: Timothy(String), test@test.co.kr(String), 123-123-1234(String), 2021-05-11 16:44:39.253(Timestamp), 1(Integer)
+[DEBUG] [2021-05-11 16:44] <==    Updates: 1
+[DEBUG] [2021-05-11 16:44] test7SelectStudentByAllForHashMap()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students
+[DEBUG] [2021-05-11 16:44] ==> Parameters: 
+[TRACE] [2021-05-11 16:44] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:44] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[TRACE] [2021-05-11 16:44] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[DEBUG] [2021-05-11 16:44] <==      Total: 2
+[DEBUG] [2021-05-11 16:44] phone -> 123-123-1234
+[DEBUG] [2021-05-11 16:44] dob -> 2021-05-11
+[DEBUG] [2021-05-11 16:44] name -> Timothy
+[DEBUG] [2021-05-11 16:44] studId -> 1
+[DEBUG] [2021-05-11 16:44] email -> test@test.co.kr
+[DEBUG] [2021-05-11 16:44] phone -> 789-456-1234
+[DEBUG] [2021-05-11 16:44] dob -> 1990-08-15
+[DEBUG] [2021-05-11 16:44] name -> Douglas
+[DEBUG] [2021-05-11 16:44] studId -> 2
+[DEBUG] [2021-05-11 16:44] email -> douglas@gmail.com
+[DEBUG] [2021-05-11 16:44] test8SelectStudentByNoAssociation()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: select stud_id, name, email, phone, dob, a.addr_id, street, city, state, zip, country from students s join addresses a on s.addr_id =a.addr_id where stud_id = ?;
+[DEBUG] [2021-05-11 16:44] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:44] <==    Columns: stud_id, name, email, phone, dob, addr_id, street, city, state, zip, country
+[TRACE] [2021-05-11 16:44] <==        Row: 1, Timothy, test@test.co.kr, 123-123-1234, 2021-05-11, 3, 710 N Cable Rd, Lima, OH, 45825, Allen
+[DEBUG] [2021-05-11 16:44] <==      Total: 1
+[DEBUG] [2021-05-11 16:44] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, Address [3, 710 N Cable Rd, Lima, OH, 45825, Allen]]
+[DEBUG] [2021-05-11 16:44] test8SelectStudentByNoAssociation()
+[DEBUG] [2021-05-11 16:44] ==>  Preparing: select stud_id, name, email, phone, dob, a.addr_id, street, city, state, zip, country from students s join addresses a on s.addr_id =a.addr_id where stud_id = ?;
+[DEBUG] [2021-05-11 16:44] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:44] <==    Columns: stud_id, name, email, phone, dob, addr_id, street, city, state, zip, country
+[TRACE] [2021-05-11 16:44] <==        Row: 1, Timothy, test@test.co.kr, 123-123-1234, 2021-05-11, 3, 710 N Cable Rd, Lima, OH, 45825, Allen
+[DEBUG] [2021-05-11 16:44] <==      Total: 1
+[DEBUG] [2021-05-11 16:44] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, Address [3, 710 N Cable Rd, Lima, OH, 45825, Allen]]
+[DEBUG] [2021-05-11 16:45] test1SelectStudentById()
+[DEBUG] [2021-05-11 16:45] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students WHERE stud_id = ?
+[DEBUG] [2021-05-11 16:45] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:45] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:45] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[DEBUG] [2021-05-11 16:45] <==      Total: 1
+[DEBUG] [2021-05-11 16:45] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, null]
+[DEBUG] [2021-05-11 16:45] test2SelectStudentByIdWithResultMap()
+[DEBUG] [2021-05-11 16:45] ==>  Preparing: select stud_id, name, email, dob , substring(phone, 1, 3) as f , substring(phone, 5, 3) as m , substring(phone, 9, 4) as l from students s where stud_id = ?;
+[DEBUG] [2021-05-11 16:45] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:45] <==    Columns: stud_id, name, email, dob, f, m, l
+[TRACE] [2021-05-11 16:45] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123, 123, 1234
+[DEBUG] [2021-05-11 16:45] <==      Total: 1
+[DEBUG] [2021-05-11 16:45] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, null]
+[DEBUG] [2021-05-11 16:45] test3SelectStudentByAll()
+[DEBUG] [2021-05-11 16:45] ==>  Preparing: select stud_id, name, email, dob from students
+[DEBUG] [2021-05-11 16:45] ==> Parameters: 
+[TRACE] [2021-05-11 16:45] <==    Columns: stud_id, name, email, dob
+[TRACE] [2021-05-11 16:45] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11
+[TRACE] [2021-05-11 16:45] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15
+[DEBUG] [2021-05-11 16:45] <==      Total: 2
+[DEBUG] [2021-05-11 16:45] test4InsertStudent()
+[DEBUG] [2021-05-11 16:45] ==>  Preparing: insert into students(stud_id, name, email, phone, dob) values (?, ?, ?, ?, ?)
+[DEBUG] [2021-05-11 16:45] ==> Parameters: 3(Integer), 홍길동3(String), lee@test.co.kr(String), 010-1234-1234(String), 1990-03-28 16:45:01.895(Timestamp)
+[DEBUG] [2021-05-11 16:45] <==    Updates: 1
+[DEBUG] [2021-05-11 16:45] test5DeleteStudent()
+[DEBUG] [2021-05-11 16:45] ==>  Preparing: delete from students where stud_id=?
+[DEBUG] [2021-05-11 16:45] ==> Parameters: 3(Integer)
+[DEBUG] [2021-05-11 16:45] <==    Updates: 1
+[DEBUG] [2021-05-11 16:45] test6UpdateStudent()
+[DEBUG] [2021-05-11 16:45] ==>  Preparing: update students set name=?, email=?, phone=?, dob=? where stud_id = ?
+[DEBUG] [2021-05-11 16:45] ==> Parameters: Timothy(String), test@test.co.kr(String), 123-123-1234(String), 2021-05-11 16:45:01.906(Timestamp), 1(Integer)
+[DEBUG] [2021-05-11 16:45] <==    Updates: 1
+[DEBUG] [2021-05-11 16:45] test7SelectStudentByAllForHashMap()
+[DEBUG] [2021-05-11 16:45] ==>  Preparing: select stud_id as studId, name, email, dob, phone from students
+[DEBUG] [2021-05-11 16:45] ==> Parameters: 
+[TRACE] [2021-05-11 16:45] <==    Columns: studId, name, email, dob, phone
+[TRACE] [2021-05-11 16:45] <==        Row: 1, Timothy, test@test.co.kr, 2021-05-11, 123-123-1234
+[TRACE] [2021-05-11 16:45] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[DEBUG] [2021-05-11 16:45] <==      Total: 2
+[DEBUG] [2021-05-11 16:45] phone -> 123-123-1234
+[DEBUG] [2021-05-11 16:45] dob -> 2021-05-11
+[DEBUG] [2021-05-11 16:45] name -> Timothy
+[DEBUG] [2021-05-11 16:45] studId -> 1
+[DEBUG] [2021-05-11 16:45] email -> test@test.co.kr
+[DEBUG] [2021-05-11 16:45] phone -> 789-456-1234
+[DEBUG] [2021-05-11 16:45] dob -> 1990-08-15
+[DEBUG] [2021-05-11 16:45] name -> Douglas
+[DEBUG] [2021-05-11 16:45] studId -> 2
+[DEBUG] [2021-05-11 16:45] email -> douglas@gmail.com
+[DEBUG] [2021-05-11 16:45] test8SelectStudentByNoAssociation()
+[DEBUG] [2021-05-11 16:45] ==>  Preparing: select stud_id, name, email, phone, dob, a.addr_id, street, city, state, zip, country from students s join addresses a on s.addr_id =a.addr_id where stud_id = ?;
+[DEBUG] [2021-05-11 16:45] ==> Parameters: 1(Integer)
+[TRACE] [2021-05-11 16:45] <==    Columns: stud_id, name, email, phone, dob, addr_id, street, city, state, zip, country
+[TRACE] [2021-05-11 16:45] <==        Row: 1, Timothy, test@test.co.kr, 123-123-1234, 2021-05-11, 3, 710 N Cable Rd, Lima, OH, 45825, Allen
+[DEBUG] [2021-05-11 16:45] <==      Total: 1
+[DEBUG] [2021-05-11 16:45] Student [1, Timothy, test@test.co.kr, 123-123-1234, Tue May 11 00:00:00 KST 2021, Address [3, 710 N Cable Rd, Lima, OH, 45825, Allen]]
