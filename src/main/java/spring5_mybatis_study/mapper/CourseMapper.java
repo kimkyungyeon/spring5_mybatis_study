@@ -21,11 +21,15 @@ public interface CourseMapper {
 
 	/* 동적SQL - foreach 루프 */
 	List<Course> selectCoursesForeachByTutors(Map<String, Object> map);
-	
-	/* foreach*/
+
+	/* foreach */
 	int insertCourses(Map<String, Object> map);
-	
+
 	int deleteCourses(Map<String, Object> map);
-	
+
 	int updateSetCourses(Course course);
+
+	/* Transaction */
+	int insertCourse(Course course);
+	int deleteCourse(int courseId);
 }

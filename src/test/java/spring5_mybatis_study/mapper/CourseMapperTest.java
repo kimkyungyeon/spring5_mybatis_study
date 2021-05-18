@@ -202,4 +202,24 @@ import spring5_mybatis_study.dto.Course;
 		
 		
 	}
+	
+	@Test
+	public void test11insertCourseAndDeleteCourse() {
+		Course course = new Course(7,"oracle","database",new Date(), new Date(), 4);
+		int res = mapper.insertCourse(course);
+		
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("tutorId", 4);
+		
+		List<Course> list = mapper.selectCoursesByCondition(map);
+		list.stream().forEach(System.out::println);
+		
+		res+=mapper.deleteCourse(course.getCourseId());
+		Assert.assertEquals(2, res);
+	}
+	
+	@Test
+	public void test12insertCourse() {
+		
+	}
 }

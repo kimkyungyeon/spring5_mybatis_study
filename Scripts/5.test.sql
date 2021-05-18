@@ -6,7 +6,7 @@ select * from tutors t ;
 select * from user_pics ;
 
 desc user_pics; 
-
+delete from tutors where tutor_id in(5);
 select stud_id, name, email,dob, phone
 from students s 
 where stud_id = 1;

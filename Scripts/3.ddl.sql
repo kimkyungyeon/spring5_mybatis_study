@@ -57,6 +57,7 @@ create table course_enrollment(
 
 alter table students add gender tinyint unsigned;
 
+
 create table user_pics (
 	id int(11) not null auto_increment COMMENT 'id',
 	name varchar(50) not null COMMENT 'name',
